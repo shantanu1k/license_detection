@@ -7,6 +7,7 @@ class License{
     "licenseId":"BSD-3-Clause",
     "name":"BSD 3-Clause 'New' or 'Revised' License",
     "reference":"https://opensource.org/licenses/BSD-3-Clause",
+    //To avoid Copyright <name> <year> issue
     "Actual_license_starts_from":"Redistribution",
     "contents":'''Copyright (c) [year] [fullname]
         Redistribution and use in source and binary forms, with or without
@@ -38,6 +39,7 @@ class License{
     "licenseId":"MIT",
     "name":"MIT License",
     "reference":"https://opensource.org/licenses/MIT",
+    //To avoid Copyright <name> <year> issue
     "Actual_license_starts_from":"Permission",
     "contents":'''Copyright (c) [year] [fullname]
         Permission is hereby granted, free of charge, to any person obtaining a copy

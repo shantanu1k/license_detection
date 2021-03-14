@@ -21,17 +21,31 @@ class MyLicense{
   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.''';
 }
 void main(){
+  //Instance of current class
   MyLicense mine = MyLicense();
+  //Instance of class containing 'known' license
   License l = License();
+  //Instance of class containing license comparing function
   LicenseDetection ld = LicenseDetection();
-  String knownlicnese = ""; 
-  l.MIT.forEach((key, value) {if(key == 'contents')knownlicnese = value;});
+  String license = ""; 
   String lookFrom = "";
   l.MIT.forEach((key, value) {if(key == 'Actual_license_starts_from') lookFrom = value;});
+  //Neglecting the 'copyright' notice from 'known' license
+  l.MIT.forEach((key, value) {if(key == 'contents')license = value;});
+  var startingpoint = license.indexOf(lookFrom);
+  String knownlicense = "";
+  for(int i = startingpoint;i<license.length;i++){
+    knownlicense += license[i];
+  }
+  //Neglecting the 'copyright' notice from 'found' license
   String foundlicense = "";
-  var StartingPoint = mine.mylicense.indexOf(lookFrom);
-  for(int i = StartingPoint;i<mine.mylicense.length;i++){
+  startingpoint = mine.mylicense.indexOf(lookFrom);
+  //Storing the 'found' license without 'copyright' notice
+  for(int i = startingpoint;i<mine.mylicense.length;i++){
     foundlicense += mine.mylicense[i];
   }
-  print(ld.matchpercent(knownlicnese, foundlicense));
+  print(ld.matchpercent(knownlicense, foundlicense));
+  //Actual output:  Total matches = 115
+//                  97.87234042553192% match
+//                  Unmatched keywords = [Shantanu, Kawade]   //Unmatched keywords are my name and surname :)
 }
