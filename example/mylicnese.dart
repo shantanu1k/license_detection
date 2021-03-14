@@ -2,7 +2,7 @@ import 'package:license_detection/License.dart';
 import 'package:license_detection/license_detection.dart';
 class MyLicense{
   String mylicense = '''
-  Copyright (c) [year] [fullname]
+  Copyright (c) 2021 Shantanu Kawade.
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
   in the Software without restriction, including without limitation the rights
