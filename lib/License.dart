@@ -8,7 +8,8 @@ class License{
     "name":"BSD 3-Clause 'New' or 'Revised' License",
     "reference":"https://opensource.org/licenses/BSD-3-Clause",
     "Actual_license_starts_from":"Redistribution",
-    "contents":'''Redistribution and use in source and binary forms, with or without
+    "contents":'''Copyright (c) [year] [fullname]
+        Redistribution and use in source and binary forms, with or without
         modification, are permitted provided that the following conditions are met:
         1. Redistributions of source code must retain the above copyright notice, this
           list of conditions and the following disclaimer.
@@ -38,7 +39,8 @@ class License{
     "name":"MIT License",
     "reference":"https://opensource.org/licenses/MIT",
     "Actual_license_starts_from":"Permission",
-    "contents":'''Permission is hereby granted, free of charge, to any person obtaining a copy
+    "contents":'''Copyright (c) [year] [fullname]
+        Permission is hereby granted, free of charge, to any person obtaining a copy
         of this software and associated documentation files (the "Software"), to deal
         in the Software without restriction, including without limitation the rights
         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
