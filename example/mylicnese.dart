@@ -27,12 +27,16 @@ void main(){
   License l = License();
   //Instance of class containing license comparing function
   LicenseDetection ld = LicenseDetection();
+  //Known licnese with copyright notice
   String license = ""; 
   String lookFrom = "";
+  //Getting the value from which actual license start
   l.MIT.forEach((key, value) {if(key == 'Actual_license_starts_from') lookFrom = value;});
-  //Neglecting the 'copyright' notice from 'known' license
+  //Getting the known license from class
   l.MIT.forEach((key, value) {if(key == 'contents')license = value;});
+  //Storing the index of actual start of license(without copyright notice)
   var startingpoint = license.indexOf(lookFrom);
+  //Known licnese without copyright notice
   String knownlicense = "";
   for(int i = startingpoint;i<license.length;i++){
     knownlicense += license[i];
@@ -45,7 +49,7 @@ void main(){
     foundlicense += mine.mylicense[i];
   }
   print(ld.matchpercent(knownlicense, foundlicense));
-  //Actual output:  Total matches = 115
+//   Actual output: Total matches = 115
 //                  97.87234042553192% match
 //                  Unmatched keywords = [Shantanu, Kawade]   //Unmatched keywords are my name and surname :)
 }
