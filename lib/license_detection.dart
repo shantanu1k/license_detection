@@ -2,6 +2,9 @@ library license_detection;
 class LicenseDetection{
   //Function for comparing 'known' and 'found' licenses
   String matchpercent(String knownLicnese,String foundLicense){
+    //Converting to lowercase because of case sensitivity
+    knownLicnese = knownLicnese.toLowerCase();
+    foundLicense = foundLicense.toLowerCase();
     //Created temperory variable to store keywords
     String temp = "";
     //Actual keyword matches in both known and found license
