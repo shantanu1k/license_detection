@@ -10,7 +10,7 @@ class LicenseDetection{
     List<String> known = [];
     List<String> unmatched = [];
     List<String> found = [];
-    //Storing the actual keywords in sets from known license
+    //Storing the actual keywords in list from known license
     for(int i = 0;i<knownLicnese.length;i++){
       if(knownLicnese[i] != " " && knownLicnese[i] != "\n"){
         temp += knownLicnese[i];
@@ -23,6 +23,7 @@ class LicenseDetection{
       }
     }
     temp = "";  //Using the same variable from line 5
+    //Storing the actual keywords in list from found license
     for(int i = 0;i<foundLicense.length;i++){
       if(foundLicense[i] != " " && foundLicense[i] != "\n"){
         temp += foundLicense[i];
