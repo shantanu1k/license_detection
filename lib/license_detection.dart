@@ -45,6 +45,7 @@ class LicenseDetection{
         unmatched.add(found.elementAt(i));
       }
     }
+    //Backup of 'matches'
     int m = matches;
     print("Total matches = $m out of ${found.length}");
     //Sorensen-Dice algorithm formula for actual match percentage
