@@ -50,6 +50,7 @@ void main(){
   for(int i = startingpoint;i<mine.mylicense.length;i++){
     foundlicense += mine.mylicense[i];
   }
+  //Calculating the % similarity
   print(ld.matchpercent(knownlicense, foundlicense));
 
 // Actual output:
