@@ -12,10 +12,10 @@ class LicenseDetection{
     List<String> found = [];
     //Storing the actual keywords in list from known license
     for(int i = 0;i<knownLicnese.length;i++){
-      if(knownLicnese[i] != " " && knownLicnese[i] != "\n"){
+      //Avoiding adding whitespace, comma, newline characters to list
+      if(knownLicnese[i] != " " && knownLicnese[i] != "\n" && knownLicnese[i] != ","){
         temp += knownLicnese[i];
       }
-      //Avoiding adding whitespace and newline characters
       if(knownLicnese[i] == " "|| knownLicnese[i] == "\n"){
         //Not including empty characters
         if(temp!="") known.add(temp);
@@ -25,10 +25,10 @@ class LicenseDetection{
     temp = "";  //Using the same variable from line 5
     //Storing the actual keywords in list from found license
     for(int i = 0;i<foundLicense.length;i++){
-      if(foundLicense[i] != " " && foundLicense[i] != "\n"){
+      //Avoiding adding whitespace, comma, newline characters to list
+      if(foundLicense[i] != " " && foundLicense[i] != "\n" && foundLicense[i] != ","){
         temp += foundLicense[i];
       }
-      //Avoiding adding whitespace and newline characters
       if(foundLicense[i] == " "|| foundLicense[i] == "\n"){
         //Not including empty characters
         if(temp!="") found.add(temp);
@@ -45,10 +45,10 @@ class LicenseDetection{
         unmatched.add(found.elementAt(i));
       }
     }
-    num m = matches;
+    int m = matches;
     print("Total matches = $m out of ${found.length}");
     //Sorensen-Dice algorithm formula for actual match percentage
-    //Just like the 'licensee' uses :)
+    //Just like the 'licensee' uses :)s
     matches = 2*matches/(known.length+found.length);
     return "${matches*100}% match\nUnmatched keywords = $unmatched";
   }
