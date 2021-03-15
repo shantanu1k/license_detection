@@ -1,6 +1,6 @@
 library license_detection;
 class LicenseDetection{
-  //Function for comparing 'known' and 'found' license
+  //Function for comparing 'known' and 'found' licenses
   String matchpercent(String knownLicnese,String foundLicense){
     //Created temperory variable to store keywords
     String temp = "";
