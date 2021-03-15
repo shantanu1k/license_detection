@@ -6,10 +6,10 @@ class LicenseDetection{
     String temp = "";
     //Actual keyword matches in both known and found license
     num matches = 0;
-    //Sets to store known,found license and unmatched keywords
-    Set<String> known = {};
+    //Lists to store known,found license and unmatched keywords
+    List<String> known = [];
     List<String> unmatched = [];
-    Set<String> found = {};
+    List<String> found = [];
     //Storing the actual keywords in sets from known license
     for(int i = 0;i<knownLicnese.length;i++){
       if(knownLicnese[i] != " " && knownLicnese[i] != "\n"){
@@ -17,7 +17,8 @@ class LicenseDetection{
       }
       //Avoiding adding whitespace and newline characters
       if(knownLicnese[i] == " "|| knownLicnese[i] == "\n"){
-        known.add(temp);
+        //Not including empty characters
+        if(temp!="") known.add(temp);
         temp = "";
       }
     }
@@ -28,7 +29,8 @@ class LicenseDetection{
       }
       //Avoiding adding whitespace and newline characters
       if(foundLicense[i] == " "|| foundLicense[i] == "\n"){
-        found.add(temp);
+        //Not including empty characters
+        if(temp!="") found.add(temp);
         temp = "";
       }
     }
