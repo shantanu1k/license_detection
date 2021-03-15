@@ -49,7 +49,7 @@ class LicenseDetection{
     int m = matches;
     print("Total matches = $m out of ${found.length}");
     //Sorensen-Dice algorithm formula for actual match percentage
-    //Just like the 'licensee' uses :)s
+    //Just like the 'licensee' uses
     matches = 2*matches/(known.length+found.length);
     return "${matches*100}% match\nUnmatched keywords = $unmatched";
   }
