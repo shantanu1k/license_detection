@@ -49,8 +49,14 @@ void main(){
     foundlicense += mine.mylicense[i];
   }
   print(ld.matchpercent(knownlicense, foundlicense));
-//   Actual output: Total matches = 115
-//                  97.87234042553192% match
-//                  Unmatched keywords = [Shantanu, Kawade]   //Unmatched keywords are my name and surname 
-//                                                            //which was in last paragraph of my license
+
+//Actual output:
+//
+// [Running] dart "d:\parse\New\license_detection\example\mylicnese.dart"
+// Total matches = 115
+// 97.87234042553192% match
+// Unmatched keywords = [Shantanu, Kawade]
+
+// [Done] exited with code=0 in 4.183 seconds
+ 
 }
