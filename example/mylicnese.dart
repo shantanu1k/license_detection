@@ -2,7 +2,7 @@ import 'package:license_detection/License.dart';
 import 'package:license_detection/license_detection.dart';
 class MyLicense{
   //This is MIT License
-  //My modification on line 21, col 5
+  //My modification is on line 21, col 5
   String mylicense = '''
     Copyright (c) 2021 Shantanu Kawade.
     Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,7 +29,7 @@ void main(){
   License l = License();
   //Instance of class containing license comparing function
   LicenseDetection ld = LicenseDetection();
-  //Known licnese with copyright notice
+  //'Known' licnese with copyright notice
   String license = ""; 
   String lookFrom = "";
   //Getting the value from which actual license start
@@ -59,7 +59,9 @@ void main(){
 //   Total matches = 156 out of 158
 //   97.80564263322884% match
 //   Unmatched keywords = [Shantanu, Kawade]
-
 //   [Done] exited with code=0 in 2.497 seconds
+  
+//  Here, [Shantanu, Kawade] is my name and surname appeared in the last paragraph
+//  of found license
  
 }
