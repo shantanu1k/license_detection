@@ -19,6 +19,7 @@ class LicenseDetection{
       if(knownLicnese[i] != " " && knownLicnese[i] != "\n" && knownLicnese[i] != ","){
         temp += knownLicnese[i];
       }
+      //If we encounter whitespace or newline then add keyword stored in 'temp' to list
       if(knownLicnese[i] == " "|| knownLicnese[i] == "\n"){
         //Not including empty characters
         if(temp!="") known.add(temp);
