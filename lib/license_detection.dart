@@ -19,20 +19,21 @@ class LicenseDetection{
       if(knownLicnese[i] != " " && knownLicnese[i] != "\n" && knownLicnese[i] != ","){
         temp += knownLicnese[i];
       }
-      //If we encounter whitespace or newline then add keyword stored in 'temp' to list
+      //If we encounter any whitespace or a newline then add keyword stored in 'temp' to list
       if(knownLicnese[i] == " "|| knownLicnese[i] == "\n"){
         //Not including empty characters
         if(temp!="") known.add(temp);
         temp = "";
       }
     }
-    temp = "";  //Using the same variable from line 5
+    temp = "";  //Using the same variable from line 9
     //Storing the actual keywords in list from found license
     for(int i = 0;i<foundLicense.length;i++){
       //Avoiding adding whitespace, comma, newline characters to list
       if(foundLicense[i] != " " && foundLicense[i] != "\n" && foundLicense[i] != ","){
         temp += foundLicense[i];
       }
+      //If we encounter any whitespace or a newline then add keyword stored in 'temp' to list
       if(foundLicense[i] == " "|| foundLicense[i] == "\n"){
         //Not including empty characters
         if(temp!="") found.add(temp);
@@ -45,14 +46,14 @@ class LicenseDetection{
         matches++;
       }
       else{
-        //Extra/unknown keywords in unmatched set
+        //Extra/unknown keywords in unmatched list
         unmatched.add(found.elementAt(i));
       }
     }
     //Backup of 'matches'
     int m = matches;
     print("Total matches = $m out of ${found.length}");
-    //Sorensen-Dice algorithm formula for actual match percentage
+    //Sørensen–Dice coefficient formula for actual match percentage
     //Just like the 'licensee' uses
     matches = 2*matches/(known.length+found.length);
     return "${matches*100}% match\nUnmatched keywords = $unmatched";
