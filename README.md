@@ -2,10 +2,10 @@
 
 
                                                             license_detection
-                        ____________________________________________|_________________________________________
-                       |                                                                                      |
-                      lib                                                                                  example
-                 ______|___________________________________________                                           |
+                                        ___________________________|__________________________________________
+                                       |                                                                      |
+                                      lib                                                                  example
+                 __________________________________________________                                           |
                 |                     |                            |                                          |
          Licnese.dart       licnese_detection.dart      EquivalentWords.dart                            mylicnese.dart
       (Original Licenses)   (Compares original &       (List of equivalent words                (Comparison between modified  
