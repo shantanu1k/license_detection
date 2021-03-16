@@ -1,8 +1,13 @@
 # license_detection
 
-* Index
 
-1) lib folder -> Original licenses(only two for now) ->  Matching function 
-
-2) example folder -> Comparison between original license and modified license
-
+                                                            license_detection
+                                                                    |
+                        ____________________________________________|_________________________________________
+                       |                                                                                      |
+                      lib                                                                                  example
+                 ______|___________________________________________                                           |
+                |                     |                            |                                          |
+         Licnese.dart       licnese_detection.dart      EquivalentWords.dart                            mylicnese.dart
+      (Original Licenses)   (Compares original &       (List of equivalent words                (Comparison between modified  
+                               found licnese)             from SPDX guidelines)                     & original license)
