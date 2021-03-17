@@ -50,9 +50,7 @@ class LicenseDetection{
         unmatched.add(found.elementAt(i));
       }
     }
-    //Backup of 'matches'
-    int m = matches;
-    print("Total matches = $m out of ${found.length}");
+    print("Total matches = $matches out of ${found.length}");
     //Sørensen–Dice coefficient formula for actual match percentage
     //Just like the 'licensee' uses
     matches = 2*matches/(known.length+found.length);
