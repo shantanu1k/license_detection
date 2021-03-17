@@ -1,5 +1,5 @@
-import 'package:license_detection/License.dart';
-import 'package:license_detection/license_detection.dart';
+import 'package:license_detection/licenses/License.dart';
+import 'package:license_detection/src/license_detection.dart';
 class MyLicense{
   //This is MIT License
   //My modification is on line 21, col 5

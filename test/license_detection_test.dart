@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:license_detection/license_detection.dart';
+import 'package:license_detection/src/license_detection.dart';
 void main() {
   // test('adds one to input values', () {
   //   final calculator = Calculator();
