@@ -3,9 +3,9 @@ library license_detection;
 import 'EquivalentWords.dart';
 class LicenseDetection{
   //Function for comparing 'known' and 'found' licenses
-  String matchpercent(String knownLicnese,String foundLicense){
+  String matchpercent(String knownLicense,String foundLicense){
     //Converting to lowercase because of case sensitivity
-    knownLicnese = knownLicnese.toLowerCase();
+    knownLicense = knownLicense.toLowerCase();
     foundLicense = foundLicense.toLowerCase();
     //Created temperory variable to store keywords
     String temp = "";
@@ -16,13 +16,13 @@ class LicenseDetection{
     List<String> unmatched = [];
     List<String> found = [];
     //Storing the actual keywords in list from known license
-    for(int i = 0;i<knownLicnese.length;i++){
+    for(int i = 0;i<knownLicense.length;i++){
       //Avoiding adding whitespace, comma, newline characters to list
-      if(knownLicnese[i] != " " && knownLicnese[i] != "\n" && knownLicnese[i] != ","){
-        temp += knownLicnese[i];
+      if(knownLicense[i] != " " && knownLicense[i] != "\n" && knownLicense[i] != ","){
+        temp += knownLicense[i];
       }
       //If we encounter any whitespace or a newline then add keyword stored in 'temp' to list
-      if(knownLicnese[i] == " "|| knownLicnese[i] == "\n"){
+      if(knownLicense[i] == " "|| knownLicense[i] == "\n"){
         //Not including empty characters
         if(temp!="") known.add(temp);
         temp = "";
@@ -66,6 +66,8 @@ class LicenseDetection{
         j++;
       }
     }
+    // print(known);
+    // print(found);
     print("Total matches = $matches out of ${found.length}");
     //Sørensen–Dice coefficient formula for actual match percentage
     //Just like the 'licensee' uses
