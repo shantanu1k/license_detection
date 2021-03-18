@@ -6,7 +6,7 @@
  
  **Checklist**
  
-   * Ignore the replacable text like organization name, bullet points,etc. which marked between ^text^ ✔
+   * Ignore the replaceable text like organization name, bullet points,etc. which marked between ^text^ ✔
  
    * Ignore the copyright notice ✔
 
