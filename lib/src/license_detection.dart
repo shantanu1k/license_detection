@@ -74,8 +74,8 @@ class LicenseDetection{
         j++;
       }
     }
-    //  print(known);
-    //  print(found);
+      print(known);
+      print(found);
     print("Total matches = $matches out of ${found.length}");
     //Sørensen–Dice coefficient formula for actual match percentage
     //Just like the 'licensee' uses
