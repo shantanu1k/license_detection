@@ -4,9 +4,10 @@
  
    * Instead of doing letter by letter comparison, I am doing comparison between words.
  
-   * Ignore the bullet points, copyright notice
+   * Ignore the replacable text like organization name, bullet points,etc.
+   
+   * Ignore the copyright notice
 
-   * Ignore the replacable text like organization name and others
 
 
   **Things yet to be worked on:**
