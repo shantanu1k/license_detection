@@ -63,7 +63,7 @@ void main(){
 
 // [Done] exited with code=0 in 2.575 seconds
   
-//  Here, [Shantanu, Kawade] is my name and surname appeared in the last paragraph
+//  Here, [shantanu, kawade] is my name and surname appeared in the last paragraph
 //  of found license
  
 }
