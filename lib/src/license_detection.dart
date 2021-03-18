@@ -1,4 +1,6 @@
 library license_detection;
+
+import 'EquivalentWords.dart';
 class LicenseDetection{
   //Function for comparing 'known' and 'found' licenses
   String matchpercent(String knownLicnese,String foundLicense){
@@ -50,10 +52,36 @@ class LicenseDetection{
         unmatched.add(found.elementAt(i));
       }
     }
+    //If unmatched keywords are from equivalent words mentioned in SPDX guidelines
+    List<String> equivalent = unmatchedAnalysis(unmatched);
+    //Adding in the count
+    matches += equivalent.length;
+    //Removing the equivalent keywords from unmatched list
+    for(int i = 0;i<equivalent.length;i++){
+      int j = 0;
+      while(j<unmatched.length){
+        if(equivalent.elementAt(i) == unmatched[j]){
+          unmatched.remove(equivalent.elementAt(i));
+        }
+        j++;
+      }
+    }
     print("Total matches = $matches out of ${found.length}");
     //Sørensen–Dice coefficient formula for actual match percentage
     //Just like the 'licensee' uses
     matches = 2*matches/(known.length+found.length);
     return "${matches*100}% match\nUnmatched keywords = $unmatched";
+  }
+  //Function to check if unmatched keyword is from SPDX guidelines
+  List<String> unmatchedAnalysis(List<String> unmatched){
+    List<String> equivalent = [];
+    //Instance of 'Equivalent' class
+    EquivalentWords e = EquivalentWords();
+    for(int i = 0;i<unmatched.length;i++){
+      //Comparing key and value with unmatched keywords
+      e.words.forEach((key, value) {
+        if(unmatched[i] == key||unmatched[i] == value) equivalent.add(unmatched[i]);});
+    }
+    return equivalent;
   }
 }
