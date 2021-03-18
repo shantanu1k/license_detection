@@ -61,7 +61,7 @@ class License{
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.''',
   };
-  final Apache2 = {
+  final apache2 = {
     "version": "1.0",
     "encoding": "UTF-8",
     "xmlns":"http://www.spdx.org/license",
