@@ -11,7 +11,7 @@ class MyLicense{
     to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
     copies of the Software, and to permit persons to whom the Software is
     furnished to do so, subject to the following conditions:
-
+  # This code commented line will be ignored anyway
     The above copyright notice and this permission notice shall be included in all
     copies or substantial portions of the Software.
 
@@ -39,7 +39,7 @@ void main(){
   //Storing the index of actual start of license(without copyright notice)
   var startingpoint = license.indexOf(lookFrom);
   //Known licnese without copyright notice
-  String knownlicense = "";
+  String knownlicense = ""; 
   for(int i = startingpoint;i<license.length;i++){
     knownlicense += license[i];
   }

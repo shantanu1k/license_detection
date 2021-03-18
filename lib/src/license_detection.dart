@@ -5,8 +5,9 @@ class LicenseDetection{
   //Function for comparing 'known' and 'found' licenses
   String matchpercent(String knownLicense,String foundLicense){
     //Converting to lowercase because of case sensitivity
-    knownLicense = knownLicense.toLowerCase();
-    foundLicense = foundLicense.toLowerCase();
+    //Need to add blank space unless algorithm won't consider last word :P
+    knownLicense = knownLicense.toLowerCase() + " ";
+    foundLicense = foundLicense.toLowerCase() + " ";
     //Created temperory variable to store keywords
     String temp = "";
     //Actual keyword matches in both known and found license
@@ -22,21 +23,28 @@ class LicenseDetection{
         temp += knownLicense[i];
       }
       //If we encounter any whitespace or a newline then add keyword stored in 'temp' to list
-      if(knownLicense[i] == " "|| knownLicense[i] == "\n"){
+      else if(knownLicense[i] == " "|| knownLicense[i] == "\n"){
         //Not including empty characters
         if(temp!="") known.add(temp);
         temp = "";
       }
     }
     temp = "";  //Using the same variable from line 9
+    bool isCommented = false;
     //Storing the actual keywords in list from found license
     for(int i = 0;i<foundLicense.length;i++){
+      if(foundLicense[i] == "#"){
+        isCommented = true;
+      }
+      if(foundLicense[i] == "\n"){
+        isCommented = false;
+      }
       //Avoiding adding whitespace, comma, newline characters to list
-      if(foundLicense[i] != " " && foundLicense[i] != "\n" && foundLicense[i] != ","){
+      if(foundLicense[i] != " " && foundLicense[i] != "\n" && foundLicense[i] != ","&& foundLicense[i] != "#" && !isCommented){
         temp += foundLicense[i];
       }
       //If we encounter any whitespace or a newline then add keyword stored in 'temp' to list
-      if(foundLicense[i] == " "|| foundLicense[i] == "\n"){
+      else if(foundLicense[i] == " "|| foundLicense[i] == "\n"){
         //Not including empty characters
         if(temp!="") found.add(temp);
         temp = "";
@@ -66,8 +74,8 @@ class LicenseDetection{
         j++;
       }
     }
-    // print(known);
-    // print(found);
+    //  print(known);
+    //  print(found);
     print("Total matches = $matches out of ${found.length}");
     //Sørensen–Dice coefficient formula for actual match percentage
     //Just like the 'licensee' uses
