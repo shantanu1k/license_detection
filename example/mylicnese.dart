@@ -3,6 +3,7 @@ import 'package:license_detection/src/license_detection.dart';
 class MyLicense{
   //This is MIT License
   //My modification is on line 21, col 5
+  //Comment on line 15
   String mylicense = '''
     Copyright (c) 2021 Shantanu Kawade.
     Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,11 +56,12 @@ void main(){
 
 // Actual output:
 
-//   [Running] dart "d:\parse\New\license_detection\example\mylicnese.dart"
-//   Total matches = 156 out of 158
-//   97.80564263322884% match
-//   Unmatched keywords = [Shantanu, Kawade]
-//   [Done] exited with code=0 in 2.497 seconds
+// [Running] dart "d:\parse\New\license_detection\example\mylicnese.dart"
+// Total matches = 157 out of 159
+// 97.81931464174455% match
+// Unmatched keywords = [shantanu, kawade]
+
+// [Done] exited with code=0 in 2.575 seconds
   
 //  Here, [Shantanu, Kawade] is my name and surname appeared in the last paragraph
 //  of found license
