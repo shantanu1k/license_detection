@@ -1,6 +1,6 @@
 # license_detection
 
- **Basic idea**
+ **Approach**
  
    * Instead of doing letter by letter comparison, I am doing comparison 
  between words.
