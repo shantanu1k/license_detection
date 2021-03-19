@@ -4,15 +4,11 @@
  
    * Instead of doing letter by letter comparison, I am doing comparison between words.
  
- **Checklist**
+   * Ignore the replaceable text like organization name, bullet points,etc.
  
-   * Ignore the replaceable text like organization name, bullet points,etc. which marked between ^text^ ✔
- 
-   * Ignore the copyright notice ✔
+   * Ignore the copyright notice 
 
-   * Ignore the line if '#(code comment indicator)' found at the start of the line. ✔
-
-
+   * Ignore the line if '#(code comment indicator)' found at the start of the line. 
 
 
   **Things yet to be worked on:**
