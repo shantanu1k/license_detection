@@ -2,7 +2,7 @@ import 'package:license_detection/licenses/License.dart';
 import 'package:license_detection/src/license_detection.dart';
 class MyLicense{
   //This is MIT License
-  //My modification is on line 21, col 5
+  //My modification is on line 22, col 5
   //Comment on line 15
   String mylicense = '''
     Copyright (c) 2021 Shantanu Kawade.
