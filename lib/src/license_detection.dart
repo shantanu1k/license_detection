@@ -1,5 +1,4 @@
 library license_detection;
-
 import 'EquivalentWords.dart';
 class LicenseDetection{
   //Function for comparing 'known' and 'found' licenses
@@ -33,14 +32,18 @@ class LicenseDetection{
     bool isCommented = false;
     //Storing the actual keywords in list from found license
     for(int i = 0;i<foundLicense.length;i++){
+      //If we find code comment indicator(#) then we will
+      //ignore the text appears afterwards
       if(foundLicense[i] == "#"){
         isCommented = true;
       }
+      //If we find a newline then we will start considering text
       if(foundLicense[i] == "\n"){
         isCommented = false;
       }
-      //Avoiding adding whitespace, comma, newline characters to list
-      if(foundLicense[i] != " " && foundLicense[i] != "\n" && foundLicense[i] != ","&& foundLicense[i] != "#" && !isCommented){
+      //Avoiding adding whitespace, comma, code comment indicator, newline characters to list
+      //and also if text is not commented
+      if(foundLicense[i] != " " && foundLicense[i] != "\n" && foundLicense[i] != "," && foundLicense[i] != "#" && !isCommented){
         temp += foundLicense[i];
       }
       //If we encounter any whitespace or a newline then add keyword stored in 'temp' to list
