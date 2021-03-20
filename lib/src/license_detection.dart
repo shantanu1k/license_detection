@@ -53,9 +53,17 @@ class LicenseDetection{
         temp = "";
       }
     }
+    //Keeping backup of both licenses
+    var trueFoundLength = found.length;
+    var trueknownLength = known.length;
+    print(known);
+    print(found);
     //Finding the keywords that are present in both known and found license
     for(int i = 0;i<found.length;i++){
       if(known.contains(found.elementAt(i))){
+        //Quickly remove that word to avoid unecessary match afterwards
+        known.remove(found.elementAt(i));
+        //increment count
         matches++;
       }
       else{
@@ -77,12 +85,13 @@ class LicenseDetection{
         j++;
       }
     }
-      print(known);
-      print(found);
-    print("Total matches = $matches out of ${found.length}");
+    //if(trueFoundLength>trueknownLength)
+      print("Total matches = $matches out of $trueFoundLength");
+    // else  
+    //   print("Total matches = $matches out of $trueknownLength");
     //Sørensen–Dice coefficient formula for actual match percentage
     //Just like the 'licensee' uses
-    matches = 2*matches/(known.length+found.length);
+    matches = 2*matches/(trueFoundLength+trueknownLength);
     return "${matches*100}% match\nUnmatched keywords = $unmatched";
   }
   //Function to check if unmatched keyword is from SPDX guidelines
