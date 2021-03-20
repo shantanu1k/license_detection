@@ -4,14 +4,16 @@
  
    * Instead of doing letter by letter comparison, I am doing comparison between words.
  
-   * Ignore the replaceable text like organization name, bullet points,etc.
+   * Working on ignoring the replaceable text like organization name, bullet points,etc.
  
-   * Ignore the copyright notice 
+   * Ignored the copyright notice 
 
-   * Ignore the line if '#(code comment indicator)' found at the start of the line. 
+   * Ignored the line if '#(code comment indicator)' found at the start of the line. 
 
 
   **Things yet to be worked on:**
+  
+   * Comparing modified license with two or more licenses in single run.
 
    * Extraneous Text At the End of a License
 
