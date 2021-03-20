@@ -56,8 +56,8 @@ class LicenseDetection{
     //Keeping backup of both licenses
     var trueFoundLength = found.length;
     var trueknownLength = known.length;
-    print(known);
-    print(found);
+    // print(known);
+    // print(found);
     //Finding the keywords that are present in both known and found license
     for(int i = 0;i<found.length;i++){
       if(known.contains(found.elementAt(i))){
@@ -85,16 +85,13 @@ class LicenseDetection{
         j++;
       }
     }
-    //if(trueFoundLength>trueknownLength)
       print("Total matches = $matches out of $trueFoundLength");
-    // else  
-    //   print("Total matches = $matches out of $trueknownLength");
     //Sørensen–Dice coefficient formula for actual match percentage
     //Just like the 'licensee' uses
     matches = 2*matches/(trueFoundLength+trueknownLength);
     return "${matches*100}% match\nUnmatched keywords = $unmatched";
   }
-  //Function to check if unmatched keyword is from SPDX guidelines
+  //Function to check if unmatched keyword is from SPDX guidelines equivalent words
   List<String> unmatchedAnalysis(List<String> unmatched){
     List<String> equivalent = [];
     //Instance of 'Equivalent' class
