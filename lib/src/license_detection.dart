@@ -11,9 +11,11 @@ class LicenseDetection{
     String temp = "";
     //Actual keyword matches in both known and found license
     num matches = 0;
-    //Lists to store known,found license and unmatched keywords
+    //List to store words from known/original license
     List<String> known = [];
+    //List to store words from found/modified license which are not present in known/original license
     List<String> unmatched = [];
+    //List to store words from found/modified license
     List<String> found = [];
     //Storing the actual keywords in list from known license
     for(int i = 0;i<knownLicense.length;i++){
