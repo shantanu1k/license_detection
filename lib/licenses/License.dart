@@ -1,5 +1,5 @@
 class License{
-  //For sample, I have included only two original licenses.
+  //For sample, I have included only three original licenses.
   final BSD3 = {
     "version": "1.0",
     "encoding": "UTF-8",
