@@ -1,5 +1,5 @@
 import 'package:license_detection/licenses/License.dart';
-import 'package:license_detection/src/license_detection.dart';
+import 'package:license_detection/src/license_matching.dart';
 class MyLicense{
   //This is MIT License
   //My modification is on line 22, col 5
@@ -29,7 +29,7 @@ void main(){
   //Instance of class containing 'known' license
   License l = License();
   //Instance of class containing license comparing function
-  LicenseDetection ld = LicenseDetection();
+  LicenseMatching lm = LicenseMatching();
   //'Known' licnese with copyright notice
   String license = ""; 
   String lookFrom = "";
@@ -52,7 +52,7 @@ void main(){
     foundlicense += mine.mylicense[i];
   }
   //Calculating the % similarity
-  print(ld.matchpercent(knownlicense, foundlicense));
+  print(lm.matchpercent(knownlicense, foundlicense));
 
 // Actual output:
 

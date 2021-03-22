@@ -1,6 +1,6 @@
-library license_detection;
+library license_matching;
 import 'EquivalentWords.dart';
-class LicenseDetection{
+class LicenseMatching{
   //Function for comparing 'known' and 'found' licenses
   String matchpercent(String knownLicense,String foundLicense){
     //Converting to lowercase because of case sensitivity
@@ -87,7 +87,7 @@ class LicenseDetection{
         j++;
       }
     }
-      print("Total matches = $matches out of $trueFoundLength");
+    print("Total matches = $matches out of $trueFoundLength");
     //Sørensen–Dice coefficient formula for actual match percentage
     //Just like the 'licensee' uses
     matches = 2*matches/(trueFoundLength+trueknownLength);
