@@ -1,0 +1,1 @@
+export 'package:license_detection/src/license_matching.dart';
