@@ -7,3 +7,7 @@
    * Ignored the copyright notice 
 
    * Ignored the line if '#(code comment indicator)' found at the start of the line.
+  
+   * Created separate class for every original license instead putting them in one **BULKY** class
+
+
