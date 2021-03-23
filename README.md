@@ -6,4 +6,4 @@
  
    * Ignored the copyright notice 
 
-   * Ignored the line if '#(code comment indicator)' found at the start of the line.e
+   * Ignored the line if '#(code comment indicator)' found at the start of the line.
