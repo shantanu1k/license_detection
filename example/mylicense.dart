@@ -1,4 +1,4 @@
-import 'package:license_detection/licenses/License.dart';
+import 'package:license_detection/licenses/MIT.dart';
 import 'package:license_detection/src/license_matching.dart';
 class MyLicense{
   //This is MIT License
@@ -27,16 +27,16 @@ void main(){
   //Instance of current class
   MyLicense mine = MyLicense();
   //Instance of class containing 'known' license
-  License l = License();
+  MIT mit = MIT();
   //Instance of class containing license comparing function
   LicenseMatching lm = LicenseMatching();
   //'Known' licnese with copyright notice
   String license = ""; 
   String lookFrom = "";
   //Getting the value from which actual license start
-  l.MIT.forEach((key, value) {if(key == 'Actual_license_starts_from') lookFrom = value;});
+  mit.data.forEach((key, value) {if(key == 'Actual_license_starts_from') lookFrom = value;});
   //Getting the known license from class
-  l.MIT.forEach((key, value) {if(key == 'contents')license = value;});
+  mit.data.forEach((key, value) {if(key == 'contents')license = value;});
   //Storing the index of actual start of license(without copyright notice)
   var startingpoint = license.indexOf(lookFrom);
   //Known licnese without copyright notice
