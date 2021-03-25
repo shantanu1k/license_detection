@@ -41,7 +41,7 @@ void main(){
 
 // [Running] dart "d:\parse\New\license_detection\example\mylicense.dart"
 // Total matches = 158 out of 164
-// 95.75757575757575% 
+// 95.76% 
 // Unmatched words: [(c), 2021, shantanu, kawade., shantanu, kawade]
 
 // [Done] exited with code=0 in 2.557 seconds
