@@ -7,9 +7,7 @@ class BSD3{
     "licenseId":"BSD-3-Clause",
     "name":"BSD 3-Clause 'New' or 'Revised' License",
     "reference":"https://opensource.org/licenses/BSD-3-Clause",
-    //To avoid Copyright <name> <year> issue
-    "Actual_license_starts_from":"Redistribution",
-    "contents":'''Copyright (c) [year] [fullname]
+    "contents":'''Copyright <YEAR> <COPYRIGHT HOLDER>
         Redistribution and use in source and binary forms, with or without
         modification, are permitted provided that the following conditions are met:
         1. Redistributions of source code must retain the above copyright notice, this

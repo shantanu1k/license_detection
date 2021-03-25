@@ -2,7 +2,7 @@ import 'package:license_detection/licenses/MIT.dart';
 import 'package:license_detection/src/license_matching.dart';
 class MyLicense{
   //This is MIT License
-  //My modification is on line 22, col 5
+  //My modification is on line 22 and copyright notice
   //Comment on line 15
   String mylicense = '''
     Copyright (c) 2021 Shantanu Kawade.
@@ -26,44 +26,25 @@ class MyLicense{
 void main(){
   //Instance of current class
   MyLicense mine = MyLicense();
-  //Instance of class containing 'known' license
+  //Instance of class containing 'MIT' license
   MIT mit = MIT();
   //Instance of class containing license comparing function
   LicenseMatching lm = LicenseMatching();
-  //'Known' licnese with copyright notice
-  String license = ""; 
-  String lookFrom = "";
-  //Getting the value from which actual license start
-  mit.data.forEach((key, value) {if(key == 'Actual_license_starts_from') lookFrom = value;});
+  String knownlicense = "";
   //Getting the known license from class
-  mit.data.forEach((key, value) {if(key == 'contents')license = value;});
-  //Storing the index of actual start of license(without copyright notice)
-  var startingpoint = license.indexOf(lookFrom);
-  //Known licnese without copyright notice
-  String knownlicense = ""; 
-  for(int i = startingpoint;i<license.length;i++){
-    knownlicense += license[i];
-  }
-  //Neglecting the 'copyright' notice from 'found' license
-  String foundlicense = "";
-  startingpoint = mine.mylicense.indexOf(lookFrom);
-  //Storing the 'found' license without 'copyright' notice
-  for(int i = startingpoint;i<mine.mylicense.length;i++){
-    foundlicense += mine.mylicense[i];
-  }
+  mit.data.forEach((key, value) {if(key == 'contents')knownlicense = value;});
+  String foundlicense = mine.mylicense;
   //Calculating the % similarity
   print(lm.matchpercent(knownlicense, foundlicense));
-
+}
 // Actual output:
 
-// [Running] dart "d:\parse\New\license_detection\example\mylicnese.dart"
-// Total matches = 157 out of 159
-// 97.81931464174455% match
-// Unmatched keywords = [shantanu, kawade]
+// [Running] dart "d:\parse\New\license_detection\example\mylicense.dart"
+// Total matches = 158 out of 164
+// 95.75757575757575% 
+// Unmatched words: [(c), 2021, shantanu, kawade., shantanu, kawade]
 
-// [Done] exited with code=0 in 2.575 seconds
+// [Done] exited with code=0 in 2.557 seconds
   
-//  Here, [shantanu, kawade] is my name and surname appeared in the last paragraph
-//  of found license
  
-}
+

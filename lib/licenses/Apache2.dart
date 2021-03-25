@@ -7,8 +7,6 @@ class Apache2{
     "licenseId":"Apache-2.0",
     "name":"Apache License 2.0",
     "reference":"http://www.apache.org/licenses/LICENSE-2.0",
-    //To avoid Copyright <name> <year> issue
-    "Actual_license_starts_from":"Apache",
     "contents":'''Apache License
         Version 2.0, January 2004
         http://www.apache.org/licenses/
