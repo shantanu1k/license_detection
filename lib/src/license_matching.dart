@@ -90,8 +90,8 @@ class LicenseMatching{
     print("Total matches = $matches out of $trueFoundLength");
     //Sørensen–Dice coefficient formula for actual match percentage
     //Just like the 'licensee' uses
-    matches = 2*matches/(trueFoundLength+trueknownLength);
-    return "${matches*100}% \nUnmatched words: $unmatched";
+    matches = (2*matches/(trueFoundLength+trueknownLength))*100;
+    return "${matches.toStringAsPrecision(4)}% \nUnmatched words: $unmatched";
   }
   //Function to check if unmatched word is from SPDX guidelines equivalent words
   List<String> _unmatchedAnalysis(List<String> unmatched){
