@@ -2,7 +2,7 @@ library license_matching;
 import 'EquivalentWords.dart';
 class LicenseMatching{
   //Function for comparing 'known' and 'found' licenses
-  String matchpercent(String knownLicense,String foundLicense){
+  num matchpercent(String knownLicense,String foundLicense){
     //Converting to lowercase because of case sensitivity
     //Need to add blank space unless algorithm won't consider the last word 
     knownLicense = knownLicense.toLowerCase() + " ";
@@ -87,11 +87,10 @@ class LicenseMatching{
         j++;
       }
     }
-    print("Total matches = $matches out of $trueFoundLength");
     //Sørensen–Dice coefficient formula for actual match percentage
     //Just like the 'licensee' uses
     matches = (2*matches/(trueFoundLength+trueknownLength))*100;
-    return "${matches.toStringAsPrecision(4)}% \nUnmatched words: $unmatched";
+    return matches;
   }
   //Function to check if unmatched word is from SPDX guidelines equivalent words
   List<String> _unmatchedAnalysis(List<String> unmatched){
