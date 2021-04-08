@@ -8,7 +8,7 @@ class Apache2{
     "name":"Apache License 2.0",
     "reference":"http://www.apache.org/licenses/LICENSE-2.0",
     "begins_with":"Apache license",
-    "ends_with":"Contributor by reason of your accepting any such warranty or additional liability.",
+    "ends_with":"Contributor by reason of your accepting any such warranty or additional liability",
     "contents":'''Apache License
         Version 2.0, January 2004
         http://www.apache.org/licenses/

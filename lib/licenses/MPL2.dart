@@ -8,7 +8,7 @@ class MPL2{
     "name":"Mozilla Public License 2.0",
     "reference":"https://opensource.org/licenses/MPL-2.0",
     "begins_with":"Mozilla Public License Version 2.0",
-    "ends_with":"Exhibit B of this License must be attached.",
+    "ends_with":"Exhibit B of this License must be attached",
     "contents":'''Mozilla Public License Version 2.0
     1. Definitions
         1.1. “Contributor”

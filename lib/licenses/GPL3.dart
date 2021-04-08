@@ -8,7 +8,7 @@ class GPL3{
     "name":"GNU General Public License v3.0 or later",
     "reference":"https://opensource.org/licenses/BSD-2-Clause",
     "begins_with":"2007 Free Software Foundation, Inc.",
-    "ends_with":"return for a fee.",
+    "ends_with":"return for a fee",
     "contents":'''Copyright © 2007 Free Software Foundation, Inc. <https://fsf.org/>
         Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
         Preamble

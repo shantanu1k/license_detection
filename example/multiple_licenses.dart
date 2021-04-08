@@ -1,10 +1,9 @@
 import 'package:license_detection/licenses/OriginalLicenses.dart';
 import 'package:license_detection/src/license_matching.dart';
 class MultipleLicense{
-  // Function for multiple licenses
-  void detectLicense(String foundLicense){
+  String _comparableFormOf(String foundLicense){
     String backup = foundLicense;foundLicense = "";
-    bool consider = false;
+    bool consider = false;  //Should consider whitespace or not?
     for(int i = 0;i<backup.length-1;i++){
       if(backup[i] == " "&&backup[i+1] == " "){
         consider = false;
@@ -12,16 +11,11 @@ class MultipleLicense{
       else if(backup[i] == " "&&backup[i+1] != " "){
         consider = true;
       }
-      // if(backup[i] != "\n"&&consider){
-      //     foundLicense+=backup[i];
-      // }
-      if(consider){
-        if(backup[i] == "\n"&& backup[i+1]!=" "){
-          foundLicense += " ";
-        }
-        else if(backup[i] != "\n"){
-          foundLicense+=backup[i];
-        }
+      if(backup[i] == "\n"&&backup[i+1]!=" "){
+        foundLicense+=" ";
+      }
+      if(backup[i]!="\n" && consider){
+        foundLicense+=backup[i];
       }
       else if(backup[i] != "\n"&&!consider){
         if(backup[i]!= " "){
@@ -29,7 +23,30 @@ class MultipleLicense{
         }
       }
     }
-    //print(foundLicense);
+    consider = false;
+    String f = foundLicense;foundLicense = "";
+    for(int i = 0;i<f.length-1;i++){
+      if(f[i] == " "&&f[i+1] == " "){
+        consider = false;
+      }
+      else if(f[i] == " "&&f[i+1] != " "){
+        consider = true;
+      }
+      if(f[i]!="\n" && consider){
+        foundLicense+=f[i];
+      }
+      else if(f[i] != "\n"&&!consider){
+        if(f[i]!= " "){
+          foundLicense+=f[i];
+        }
+      }
+    }
+    return foundLicense;
+  }
+  // Function for multiple licenses
+  void detectLicense(String foundLicense){
+    foundLicense = _comparableFormOf(foundLicense);
+    print(foundLicense);
     //To access _matchpercent function
     LicenseMatching lm = LicenseMatching();
     //Instance of class containing 'original license' as 'map'

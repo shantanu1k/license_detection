@@ -8,7 +8,7 @@ class BSD2{
     "name":"BSD 2-Clause 'Simplified' License",
     "reference":"https://opensource.org/licenses/BSD-2-Clause",
     "begins_with":"Redistribution and use in source and binary forms, with or without modification",
-    "ends_with":"EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+    "ends_with":"EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE",
     "contents":'''Copyright (c) [year] [fullname]
         Redistribution and use in source and binary forms, with or without
         modification, are permitted provided that the following conditions are met:

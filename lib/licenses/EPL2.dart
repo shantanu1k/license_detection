@@ -8,7 +8,7 @@ class EPL2{
     "name":"Eclipse Public License 2.0",
     "reference":"https://www.opensource.org/licenses/EPL-2.0",
     "begins_with":"Eclipse Public License",
-    "ends_with":"No third-party beneficiary rights are created under this Agreement.",
+    "ends_with":"No third-party beneficiary rights are created under this Agreement",
     "contents":'''
         Eclipse Public License - v 2.0
       THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE PUBLIC LICENSE ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THE PROGRAM CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT.
