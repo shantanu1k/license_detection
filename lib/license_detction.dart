@@ -1,1 +1,2 @@
-export 'package:license_detection/src/license_matching.dart';
+export 'package:license_detection/src/MultipleMatching.dart';
+export 'package:license_detection/src/SingleMatching.dart';
