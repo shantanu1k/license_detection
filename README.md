@@ -5,8 +5,6 @@
  **Approach**
  
    * Instead of doing letter by letter comparison, I am doing comparison between words.
-
-   * Ignored the line if '#(code comment indicator)' found at the start of the line.
   
    * Created separate class for every original license instead putting them in one **BULKY** class
      (which is in custom format)
