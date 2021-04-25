@@ -11,7 +11,7 @@
 
  **Usage** 
   
-   * Clone this repo. Since, this package is not published.
+   * Clone this repo.
    
    ```Dart
    import 'package:license_detection/license_detction.dart';
