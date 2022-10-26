@@ -1,6 +1,5 @@
 # license_detection
 
-**There are lots of commits in this repo. Because, I have habit of commiting and pushing every time I make even a small change😅**
 
  **Approach**
  
